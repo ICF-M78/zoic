@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'ShuiYunZhuan';
+  src: url('/fonts/ShuiYunZhuan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DingLieSongKe';
+  src: url('/fonts/DingLieSongKe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QiJiTi';
+  src: url('/fonts/QiJiTi.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
