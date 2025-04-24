@@ -10,35 +10,36 @@
 
 <script lang="ts" setup>
 // MARK: import
-import { computed } from 'vue'
-import { useSettingsStore } from '@/stores/settings'
+import { computed } from "vue";
+import { useSettingsStore } from "@/stores/settings";
 
 // MARK: emit
-const emit = defineEmits(['toggle-settings'])
+const emit = defineEmits(["toggle-settings"]);
 
 // MARK: store
-const settingsStore = useSettingsStore()
-const settings = computed(() => settingsStore.settings)
+const settingsStore = useSettingsStore();
+const settings = computed(() => settingsStore.settings);
 
 // MARK: computed
 const panelStyle = computed(() => ({
   backgroundColor: settings.value.backgroundColor,
-}))
+}));
 
 const textStyle = computed(() => ({
   color: settings.value.textColor,
   fontSize: `${settings.value.fontSize}px`,
   fontFamily: settings.value.fontFamily,
-  position: 'absolute' as const,
+  letterSpacing: `${settings.value.letterSpacing}px`,
+  position: "absolute" as const,
   left: `${settings.value.textPosition.x}%`,
   top: `${settings.value.textPosition.y}%`,
-  transform: 'translate(-50%, -50%)',
-}))
+  transform: "translate(-50%, -50%)",
+}));
 
 // MARK: func
 const toggleSettings = () => {
-  emit('toggle-settings')
-}
+  emit("toggle-settings");
+};
 </script>
 
 <style lang="scss" scoped>

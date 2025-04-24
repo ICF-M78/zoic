@@ -50,7 +50,7 @@ $系统名称=字觉（zoic）
 
 <script lang="ts" setup>
 // MARK: import
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 
 // MARK: emit
 // const emit = defineEmits([])
@@ -74,10 +74,10 @@ import { onMounted } from 'vue'
 // const handleXXX = () => {}
 
 // MARK: expose
-defineExpose({})
+defineExpose({});
 
 // MARK: hooks
-onMounted(() => {})
+onMounted(() => {});
 </script>
 
 <style lang="scss" scoped></style>
