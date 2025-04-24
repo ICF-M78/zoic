@@ -1,1 +1,10 @@
 node_modules
+
+zoic
+
+dist
+
+.DS_Store
+
+.idea
+
