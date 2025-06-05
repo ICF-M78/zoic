@@ -13,7 +13,6 @@ export const fontOptions = [
   { label: "水云篆", value: "ShuiYunZhuan", url: "./fonts/ShuiYunZhuan.ttf" },
   { label: "宋刻", value: "DingLieSongKe", url: "./fonts/DingLieSongKe.ttf" },
   { label: "竹石体", value: "ZhuShi", url: "./fonts/ZhuShi.ttf" },
-  { label: "源云明体", value: "YuanYunMing", url: "./fonts/YuanYunMing.ttf" },
 ] as FontOption[];
 
 // MARK: func

@@ -17,7 +17,7 @@
     "format": "prettier --write src/",
     "sh-b": "sh ./build.sh",
     "sh-r": "sh ./release.sh",
-    "sh-br": "sh ./build.sh & sh ./release.sh"
+    "sh-br": "sh ./build.sh && sh ./release.sh"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.12",
