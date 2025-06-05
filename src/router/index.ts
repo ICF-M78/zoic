@@ -8,11 +8,11 @@ const router = createRouter({
       name: "home",
       component: () => import("@/views/home/HomePage.vue"),
       meta: {
-        title: "壁字",
+        title: "字觉",
       },
     },
     {
-      path: "/fd",
+      path: "/dance",
       redirect: "/font-dance",
     },
     {

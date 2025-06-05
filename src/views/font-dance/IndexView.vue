@@ -33,9 +33,8 @@ const rndSpeed = () => {
 
 /** @description 随机位置 */
 function rndPosition(): { x: number; y: number } {
-  let x: number, y: number;
-  x = Math.floor(Math.random() * window.innerWidth);
-  y = Math.floor(Math.random() * window.innerHeight);
+  const x = Math.floor(Math.random() * window.innerWidth);
+  const y = Math.floor(Math.random() * window.innerHeight);
   return { x, y };
 }
 
@@ -59,10 +58,10 @@ const rndAnimation = () => {
   main_div_ref.value.appendChild(div);
 };
 
-let _t: NodeJS.Timer | null = null;
+let _t: number | null = null;
 /** @description 计时器 */
 const timer = () => {
-  _t && clearInterval(_t);
+  if (_t) clearInterval(_t);
   _t = setInterval(() => {
     rndAnimation();
   }, 50);
@@ -73,7 +72,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  _t && clearInterval(_t);
+  if (_t) clearInterval(_t);
 });
 // #endregion
 </script>
