@@ -2,7 +2,7 @@
   "name": "zoic",
   "sysNameCN": "觉知",
   "sysNameEN": "zoic",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,12 +16,13 @@
     "lint": "run-s lint:*",
     "format": "prettier --write src/",
     "sh-b": "sh ./build.sh",
-    "sh-r": "sh ./release.sh"
+    "sh-r": "sh ./release.sh",
+    "sh-br": "sh ./build.sh & sh ./release.sh"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.12",
     "@vicons/carbon": "^0.13.0",
-    "lodash-es": "^4.17.21",
+    "crypto-js": "^4.2.0",
     "naive-ui": "^2.41.0",
     "pinia": "^3.0.2",
     "pinia-plugin-persistedstate": "^4.2.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/eslint-config-prettier": "^10.2.0",

@@ -9,8 +9,8 @@
 <script lang="ts" setup>
 // MARK: import
 import { ref } from "vue";
-import DisplayPanel from "@/cmpts/DisplayPanel.vue";
-import SettingsPanel from "@/cmpts/SettingsPanel.vue";
+import DisplayPanel from "@/cmpts/custom/DisplayPanel.vue";
+import SettingsPanel from "@/cmpts/custom/SettingsPanel.vue";
 
 // MARK: params
 const isSettingsVisible = ref(false);

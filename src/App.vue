@@ -1,16 +1,18 @@
 <script lang="ts" setup>
 import { NConfigProvider, darkTheme } from "naive-ui";
 import { computed } from "vue";
-import { useSettingsStore } from "@/stores/settings";
-
-const settingsStore = useSettingsStore();
+// pinia
+import { useAppStore } from "@/stores/app";
+import { storeToRefs } from "pinia";
+const store = useAppStore();
+const { settings } = storeToRefs(store);
 
 const themeOverrides = computed(() => ({
   common: {
-    primaryColor: settingsStore.settings.textColor,
-    primaryColorHover: settingsStore.settings.textColor,
-    primaryColorPressed: settingsStore.settings.textColor,
-    primaryColorSuppl: settingsStore.settings.textColor,
+    primaryColor: settings.value.textColor,
+    primaryColorHover: settings.value.textColor,
+    primaryColorPressed: settings.value.textColor,
+    primaryColorSuppl: settings.value.textColor,
   },
 }));
 </script>

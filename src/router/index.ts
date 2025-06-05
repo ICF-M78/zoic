@@ -31,8 +31,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   // 设置页面标题
   document.title = to.meta.title
-    ? `${to.meta.title} - ${config.sysNameCN}`
-    : `${config.sysNameCN}`;
+    ? `${to.meta.title} - ${config.sysNameCN}（${config.versionId}）`
+    : `${config.sysNameCN}（${config.versionId}）`;
   next();
 });
 

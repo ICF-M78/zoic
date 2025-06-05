@@ -1,17 +1,17 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
-import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+import { setupStores } from "@/stores/index";
 
-import "./styles/fonts.css";
+import "./styles/fonts.scss";
 import App from "./App.vue";
 import router from "./router";
 import naive from "naive-ui";
+import { preLoadAllFonts } from "@/assets/load-font";
+
+// MARK: preload fonts
+preLoadAllFonts().catch(console.error);
 
 const app = createApp(App);
-const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
-
-app.use(pinia);
+setupStores(app);
 app.use(router);
 app.use(naive);
 
