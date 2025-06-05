@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import config from "@/config";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +30,9 @@ const router = createRouter({
 // 前置路由守卫
 router.beforeEach((to, from, next) => {
   // 设置页面标题
-  document.title = to.meta.title ? `${to.meta.title} - Zoic` : "Zoic";
+  document.title = to.meta.title
+    ? `${to.meta.title} - ${config.sysNameCN}`
+    : `${config.sysNameCN}`;
   next();
 });
 

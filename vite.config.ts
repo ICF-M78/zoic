@@ -4,10 +4,12 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
+import packageJson from "./package.json";
+
 export default defineConfig({
-  base: "/zoic/",
+  base: `/${packageJson.name}/`,
   build: {
-    outDir: "./zoic",
+    outDir: `./${packageJson.name}`,
   },
   plugins: [vue(), vueDevTools()],
   server: {

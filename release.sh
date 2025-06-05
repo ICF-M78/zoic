@@ -1,15 +1,7 @@
-# 发布 114.215.187.227 
-# 端口 1234 
-# 账户 norma 
-# 密码 000626
-# 地址 /var/www/pages/zoic
+# 拷贝到服务器
+scp ~/Downloads/zoic.zip m87:/var/www/
 
-scp -P 1234 /Users/wujingtao/Downloads/zoic.zip norma@114.215.187.227:/var/www/pages
+# 在服务器上执行命令
+ssh m87 "cd /var/www/ && rm -rf zoic && unzip zoic.zip && rm -rf zoic.zip"
 
-ssh -p 1234 norma@114.215.187.227
-
-# 解压
-unzip zoic.zip
-
-# 删除压缩文件
-rm -rf zoic.zip
+rm -rf ~/Downloads/zoic.zip

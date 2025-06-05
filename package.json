@@ -1,5 +1,7 @@
 {
   "name": "zoic",
+  "sysNameCN": "觉知",
+  "sysNameEN": "zoic",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +14,9 @@
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
     "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "sh-b": "sh ./build.sh",
+    "sh-r": "sh ./release.sh"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.12",
