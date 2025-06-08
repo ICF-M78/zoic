@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CodePen - word animation | word filter</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                padding: 0;
+                margin: 0;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                filter: contrast(20);
+                background-color: black;
+                overflow: hidden;
+            }
+
+            h1 {
+                font-family: consolas, 黑体;
+                color: white;
+                font-size: 4rem;
+                text-transform: uppercase;
+                line-height: 1;
+                animation: letterspacing 5s infinite alternate ease-in-out;
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 40%;
+                transform: translate3d(-50%, -50%, 0);
+                letter-spacing: -2rem;
+                white-space: nowrap;
+                padding: 0;
+                margin: 0;
+            }
+
+            @keyframes letterspacing {
+                0% {
+                    letter-spacing: -2rem;
+                    filter: blur(1rem);
+                    color: red;
+                }
+                50% {
+                    filter: blur(0.5rem);
+                }
+                80% {
+                    letter-spacing: 0.5rem;
+                    filter: blur(0.1rem);
+                    color: #fff;
+                }
+                100% {
+                    letter-spacing: 0.5rem;
+                    filter: blur(0rem);
+                    color: #fff;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>ABCDE 中文测试</h1>
+        </div>
+    </body>
+</html>

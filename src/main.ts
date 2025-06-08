@@ -1,11 +1,12 @@
-import { createApp } from "vue";
-import { setupStores } from "@/stores/index";
+import { createApp } from 'vue';
+import { setupStores } from '@/stores/index';
 
-import "./styles/fonts.scss";
-import App from "./App.vue";
-import router from "./router";
-import naive from "naive-ui";
-import { preLoadAllFonts } from "@/assets/load-font";
+import 'uno.css';
+import './styles/fonts.scss';
+import App from './App.vue';
+import router from './router';
+import naive from 'naive-ui';
+import { preLoadAllFonts } from '@/assets/load-font';
 
 // MARK: preload fonts
 preLoadAllFonts().catch(console.error);
@@ -15,4 +16,4 @@ setupStores(app);
 app.use(router);
 app.use(naive);
 
-app.mount("#app");
+app.mount('#app');

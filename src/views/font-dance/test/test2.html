@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <title>文本溶解效果</title>
+        <style>
+            #container {
+                margin: 3rem;
+                /**	
+	contrast指的是图像的对比度。
+	值是0%的话，图像会全黑。
+	值是100%，图像不变。
+	值可以超过100%，意味着会运用更低的对比。
+	若没有设置值，默认是1，即100%。
+	
+	降低对比度能让黑和白的界限更模糊，从而达到这种溶解的效果
+	*/
+                filter: contrast(10);
+            }
+            #A,
+            #B {
+                color: black;
+                text-align: center;
+                font-size: 200px;
+                font-weight: bold;
+                position: absolute;
+                white-space: nowrap;
+                /**
+	溶解的动画，主要是由阴影和低对比度配合实现的（二者缺一不可）
+	黑色的字体，加上白色的阴影，叠加形成减淡效果，用来模拟溶解
+	*/
+                text-shadow: 0px 0px 120px white;
+            }
+            #A {
+                /**
+	infinite 表示动画反复
+	alternate 表示动画交替执行，即从开始到结束，再从结束到开始
+	reverse 表示顺序颠倒
+	*/
+                animation: blur 5s infinite alternate-reverse;
+            }
+            #B {
+                animation: blur 5s infinite alternate;
+            }
+            /**
+模糊动画
+*/
+            @keyframes blur {
+                0% {
+                    opacity: 0;
+                    filter: blur(28px);
+                }
+                10% {
+                    opacity: 0;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 1;
+                    filter: blur(6px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="A">Tencent</div>
+            <div id="B">Google</div>
+        </div>
+    </body>
+</html>

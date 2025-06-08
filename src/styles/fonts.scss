@@ -1,14 +1,12 @@
 @font-face {
-    font-family: "DingLieSongKe";
-    src: url("/fonts/DingLieSongKe.ttf") format("truetype");
+    font-family: 'DingLieSongKe';
+    src: url('/fonts/DingLieSongKe.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-
-
 /* 设置所有字体为 宋刻 */
 * {
-    font-family: "DingLieSongKe";
+    font-family: 'DingLieSongKe';
 }
