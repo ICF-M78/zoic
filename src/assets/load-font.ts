@@ -10,9 +10,21 @@ interface FontOption {
  * @returns FontFace[]
  */
 export const fontOptions = [
-    { label: '水云篆', value: 'ShuiYunZhuan', url: './fonts/ShuiYunZhuan.ttf' },
-    { label: '宋刻', value: 'DingLieSongKe', url: './fonts/DingLieSongKe.ttf' },
-    { label: '竹石体', value: 'ZhuShi', url: './fonts/ZhuShi.ttf' },
+    {
+        label: '水云篆',
+        value: 'ShuiYunZhuan',
+        url: 'https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/ShuiYunZhuan.ttf',
+    },
+    {
+        label: '宋刻',
+        value: 'DingLieSongKe',
+        url: 'https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/DingLieSongKe.ttf',
+    },
+    {
+        label: '竹石体',
+        value: 'ZhuShi',
+        url: 'https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/ZhuShi.ttf',
+    },
 ] as FontOption[];
 
 // MARK: func

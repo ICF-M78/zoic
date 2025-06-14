@@ -1,7 +1,7 @@
 <!-- 主页面组件 -->
 <template>
     <div class="home">
-        <display-panel @toggle-settings="toggleSettings" />
+        <display-panel @toggle-settings="toggleSettings" @dblclick="isSettingsVisible = true" />
         <settings-panel v-model:isVisible="isSettingsVisible" />
     </div>
 </template>

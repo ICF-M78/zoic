@@ -1,13 +1,47 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <!-- 预加载字体 -->
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/ShuiYunZhuan.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/DingLieSongKe.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/gh/Programmer-Care-Center/fonts@main/ZhuShi.ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <style>
+            /* 字体回退方案 */
+            body {
+                font-family:
+                    'ShuiYunZhuan',
+                    'DingLieSongKe',
+                    'ZhuShi',
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
